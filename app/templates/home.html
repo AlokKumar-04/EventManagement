@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}  {# Load static before using it #}
+
+{% block title %}Home - Event Registration{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Create Unforgettable Experiences</h1>
+        <p class="lead">We organize events that leave a lasting impact. Let’s make your next event extraordinary.</p>
+        <a href="#events" class="btn btn-primary btn-lg">Explore Events</a>
+    </div>
+</div>
+
+<section id="events" class="container my-5">
+    <h2 class="text-center mb-4">Upcoming Events</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="{% static 'app/images/concert.jpg' %}" class="card-img-top" alt="Concert">
+                <div class="card-body">
+                    <h5 class="card-title">Live Concert</h5>
+                    <p class="card-text">Experience the best music live in your city.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="{% static 'app/images/conference.jpg' %}" class="card-img-top" alt="Conference">
+                <div class="card-body">
+                    <h5 class="card-title">Business Conference</h5>
+                    <p class="card-text">Connect with industry experts and expand your network.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card event-card">
+                <img src="{% static 'app/images/tech.jpg' %}" class="card-img-top" alt="Tech">
+                <div class="card-body">
+                    <h5 class="card-title">Tech Event</h5>
+                    <p class="card-text">Stay updated with the latest trends in technology.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
